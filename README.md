@@ -1,6 +1,6 @@
 # camunda-poc
 
-##SET UP
+## SET UP
 
 1. git clone <br>
 2. cd camunda-poc <br>
