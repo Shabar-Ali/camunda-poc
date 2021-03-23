@@ -72,6 +72,12 @@ router.post('/change-state', async(req, res) => {
     })
     .then(response => {
         let data = response.data;
+
+
+        if(data === "Process Completed"){
+            return res.render("thankyou", {text: "Process Completed"});
+        }
+
         let name = data.name;
 
         if(name === "IR Pending"){
