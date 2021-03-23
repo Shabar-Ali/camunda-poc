@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+
+
+<div class="container mt-5">
+    <h1>Currently in IR Hold</h1>
+    <form action="/change-state" method="post">
+        <input type="text" name="id" value="<%=data.id%>" hidden="true"></input>
+        <input type="text" name="name" value="<%=data.name%>" hidden="true"></input>
+        <input type="text" name="loanId" value="<%=data.loanId%>" hidden="true"></input>
+        <button class="btn btn-lg btn-danger" style="text-align:center">Release Hold</button>
+    </form>
+    
+
+</div>
+<%- include("partials/footer") %>

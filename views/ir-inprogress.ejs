@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+
+<div class="container mt-5">
+    <h2>Currently in IR In-Progress</h2>
+    <form action="/change-state" method="post">
+        <input type="text" name="id" value="<%=data.id%>" hidden="true"></input>
+        <input type="text" name="name" value="<%=data.name%>" hidden="true"></input>
+        <input type="text" name="loanId" value="<%=data.loanId%>" hidden="true"></input>
+        <textarea  class="form-control" name="enquiry" id=""  rows="5" style="width:100%" placeholder="Your enquiry Here..."></textarea>
+        <br>
+
+        <input type="checkbox" id="hold" name="hold" value="Hold">
+        <label for="hold">Put on Hold</label><br>
+
+        <button class="btn btn-lg btn-primary">SUBMIT</button>
+    </form>
+    
+
+</div>
+<%- include("partials/footer") %>

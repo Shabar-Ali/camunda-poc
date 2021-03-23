@@ -1,0 +1,13 @@
+<%- include("partials/header") %>
+
+
+<div class="center">
+    <h2>Currently in IR Pending state</h2>
+    <form action="/change-state" method="POST">
+        <input type="text" name="id" value="<%=data.id%>" hidden="true"></input>
+        <input type="text" name="name" value="<%=data.name%>" hidden="true"></input>
+        <input type="text" name="loanId" value="<%=data.loanId%>" hidden="true"></input>
+        <button class="btn btn-lg btn-success" >Move to IR In-Progress</button>
+    </form>
+</div>
+<%- include("partials/footer") %>
