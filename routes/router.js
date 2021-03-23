@@ -12,22 +12,6 @@ router.get('/home', (req, res) => {
     res.render("home");
 });
 
-router.get('/loans/inprogress', (req, res) => {
-    res.render("ir-inprogress");
-});
-
-router.get('/loans/hold', (req, res) => {
-    res.render("ir-hold");
-});
-
-router.get('/loans/pending', (req, res) => {
-    res.render("ir-pending");
-});
-
-router.get('/loans/completed', (req, res) => {
-    res.render("ir-completed");
-});
-
 
 router.post('/start-service', async(req, res) => {
     let loanId = req.body.loanId;
