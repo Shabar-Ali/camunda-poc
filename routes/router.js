@@ -35,7 +35,7 @@ router.post('/start-service', async(req, res) => {
         else if(name === "IR Hold"){
             res.render("ir-hold", {data});
         }
-        else if(name === "IR Completed"){
+        else if(name === "IR Complete"){
             res.render("ir-completed", {data});
         }
         else{
@@ -73,7 +73,8 @@ router.post('/change-state', async(req, res) => {
     .then(response => {
         let data = response.data;
 
-
+        console.log(data)
+        console.log("*********")
         if(data === "Process Completed"){
             return res.render("thankyou", {text: "Process Completed"});
         }
@@ -89,7 +90,7 @@ router.post('/change-state', async(req, res) => {
         else if(name === "IR Hold"){
             res.render("ir-hold", {data});
         }
-        else if(name === "IR Completed"){
+        else if(name === "IR Complete"){
             res.render("ir-completed", {data});
         }
         else{
@@ -98,8 +99,7 @@ router.post('/change-state', async(req, res) => {
     })
     .catch(err => {
         console.log("Error in sending the satte change request");
-        let text = {title: "Something wrong happened"};
-        res.render("thankyou", {text});
+        res.render("thankyou", {text: "Something wrong happened"});
     });
 });
 
